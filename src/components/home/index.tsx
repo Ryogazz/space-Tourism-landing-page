@@ -1,8 +1,10 @@
+import NavBar from '../navBar';
 import * as S from "./style";
 
 const Home = () => {
   return (
     <S.Background>
+      <NavBar/>
       <S.TextAndCircle>
         <S.Container>
           <S.Heading5>SO, YOU WANT TO TRAVEL TO</S.Heading5>

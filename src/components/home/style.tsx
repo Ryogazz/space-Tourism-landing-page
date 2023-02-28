@@ -8,7 +8,7 @@ export const Background = styled.div`
   background-size: cover;
   width: 100%;
   height: 100vh;
-  display: flex;
+  overflow-y: auto;
 `;
 
 export const Heading1 = styled.h1`
@@ -81,6 +81,6 @@ export const TextCircle = styled.div`
 export const TextAndCircle = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 100vw;
-  margin-top: 500px;
+  height: calc(100% - (96px + 40px));
+  align-items: center;
 `;
