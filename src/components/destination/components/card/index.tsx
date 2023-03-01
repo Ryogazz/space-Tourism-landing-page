@@ -76,7 +76,7 @@ const Card = () => {
         <S.ImgAndText>
           <S.Img image={planetImg()} />
           <S.TextArea>
-            <CardMenu setPlanet={setPlanet} />
+            <CardMenu setPlanet={setPlanet} planet={planet} />
             <S.TitleText>{planet}</S.TitleText>
             <S.Text>{planetText()}</S.Text>
             <S.Line />
