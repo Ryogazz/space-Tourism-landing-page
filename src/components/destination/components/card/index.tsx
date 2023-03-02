@@ -1,4 +1,4 @@
-import * as S from "./styled";
+import * as S from "./style";
 import CardMenu from "../cardMenu";
 import { useState } from "react";
 
