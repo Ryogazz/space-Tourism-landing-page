@@ -1,20 +1,23 @@
 import * as S from "./style";
 import CardMenu from "../cardMenu";
 import { useState } from "react";
+import destinations from "../../../../utils/data.json";
 
 const Card = () => {
   const [planet, setPlanet] = useState<string>("moon");
 
+  const planetData = destinations.destinations;
+
   const planetImg = () => {
     let img = "";
     if (planet === "moon") {
-      img = "/destination/image-moon.png";
+      img = planetData[0].images.png;
     } else if (planet === "mars") {
-      img = "/destination/image-mars.png";
+      img = planetData[1].images.png;
     } else if (planet === "europa") {
-      img = "/destination/image-europa.png";
+      img = planetData[2].images.png;
     } else if (planet === "titan") {
-      img = "/destination/image-titan.png";
+      img = planetData[3].images.png;
     }
     return img;
   };
@@ -22,21 +25,13 @@ const Card = () => {
   const planetText = () => {
     let text = "";
     if (planet === "moon") {
-      text = `See our planet as you’ve never seen it before. 
-      A perfect relaxing trip away to help regain perspective and come back refreshed.
-      While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.`;
+      text = planetData[0].description;
     } else if (planet === "mars") {
-      text = `Don’t forget to pack your hiking boots. 
-        You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. 
-        It’s two and a half times the size of Everest!`;
+      text = planetData[1].description;
     } else if (planet === "europa") {
-      text = `The smallest of the four Galilean moons orbiting Jupiter, 
-        Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, 
-        curling, hockey, or simple relaxation in your snug wintery cabin.`;
+      text = planetData[2].description;
     } else if (planet === "titan") {
-      text = `The only moon known to have a dense atmosphere other than Earth, 
-        Titan is a home away from home (just a few hundred degrees colder!). 
-        As a bonus, you get striking views of the Rings of Saturn.`;
+      text = planetData[3].description;
     }
     return text;
   };
@@ -44,13 +39,13 @@ const Card = () => {
   const planetDistance = () => {
     let distance = "";
     if (planet === "moon") {
-      distance = "384,400 km";
+      distance = planetData[0].distance;
     } else if (planet === "mars") {
-      distance = "225 MIL. km";
+      distance = planetData[1].distance;
     } else if (planet === "europa") {
-      distance = "628 MIL. kmm";
+      distance = planetData[2].distance;
     } else if (planet === "titan") {
-      distance = "1.6 BIL. km";
+      distance = planetData[3].distance;
     }
     return distance;
   };
@@ -58,13 +53,13 @@ const Card = () => {
   const planetTravelTime = () => {
     let time = "";
     if (planet === "moon") {
-      time = "3 days";
+      time = planetData[0].travel;
     } else if (planet === "mars") {
-      time = "9 months";
+      time = planetData[1].travel;
     } else if (planet === "europa") {
-      time = "3 years";
+      time = planetData[2].travel;
     } else if (planet === "titan") {
-      time = "7 years";
+      time = planetData[3].travel;
     }
     return time;
   };

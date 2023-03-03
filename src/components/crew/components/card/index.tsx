@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Slider from "../slider";
 import * as S from "./style";
-// importar json
 import crew from "../../../../utils/data.json";
 import { useAnimationControls, motion } from "framer-motion";
 
