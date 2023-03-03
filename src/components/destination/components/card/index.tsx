@@ -67,7 +67,7 @@ const Card = () => {
   return (
     <S.Background>
       <S.Container>
-        <S.Title><S.TitleNumber>01</S.TitleNumber>  Pick your destination</S.Title>
+        <S.Title><S.TitleNumber>01</S.TitleNumber> Pick your destination</S.Title>
         <S.ImgAndText>
           <S.Img image={planetImg()} />
           <S.TextArea>
