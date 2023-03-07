@@ -21,6 +21,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 285.5px;
+    height: 34px;
+  }
 `;
 
 export const Link = styled.div<{ planet: boolean }>`
@@ -30,4 +35,7 @@ export const Link = styled.div<{ planet: boolean }>`
     box-shadow: inset 0px -2px 0px #fff;
   }
   ${({ planet }) => planet && `box-shadow: inset 0px -2px 0px #fff;`}
-`
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;

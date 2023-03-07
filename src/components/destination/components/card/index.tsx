@@ -69,7 +69,7 @@ const Card = () => {
       <S.Container>
         <S.Title><S.TitleNumber>01</S.TitleNumber> Pick your destination</S.Title>
         <S.ImgAndText>
-          <S.Img image={planetImg()} />
+          <S.Img  src={planetImg()}/>
           <S.TextArea>
             <CardMenu setPlanet={setPlanet} planet={planet} />
             <S.TitleText>{planet}</S.TitleText>

@@ -16,6 +16,11 @@ export const Bar = styled.div`
     display: flex;
     align-items: center;
   }
+
+  @media (max-width: 768px) {
+    width: 450px;
+    height: 96px;
+  }
 `;
 export const Numbers = styled.strong`
   font-weight: bold;
@@ -32,6 +37,9 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 export const Line = styled.div`
   width: calc(100% - 910px);
@@ -42,4 +50,8 @@ export const Line = styled.div`
   left: 70px;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

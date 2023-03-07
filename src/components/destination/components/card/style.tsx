@@ -11,6 +11,10 @@ export const Container = styled.div`
   justify-content: center;
   margin-top: 100px;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
 `;
 
 export const Title = styled.div`
@@ -27,8 +31,14 @@ export const Title = styled.div`
 
   letter-spacing: 4.725px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 170px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-left: 38px;
+    margin-top: 40px;
+  }
 `;
 
 export const TitleNumber = styled.strong`
@@ -39,19 +49,40 @@ export const TitleNumber = styled.strong`
 export const ImgAndText = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
-export const Img = styled.div<{ image: string }>`
-  background-image: url(${({ image }) => image});
+export const Img = styled.img`
   width: 445px;
   height: 445px;
   margin-top: 96px;
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 23px;
+  }
 `;
 
 export const TextArea = styled.div`
   width: 445px;
   height: 472px;
   margin-top: 70px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  @media (max-width: 768px) {
+    height: 0;
+    text-align: center;
+  }
 `;
 
 export const TitleText = styled.div`
@@ -66,6 +97,9 @@ export const TitleText = styled.div`
   line-height: 115px;
   color: #ffffff;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 80px;
+  }
 `;
 export const Text = styled.div`
   height: 128px;
@@ -79,6 +113,9 @@ export const Text = styled.div`
   font-size: 18px;
   line-height: 32px;
   color: #d0d6f9;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 export const Line = styled.div`
   height: 1px;
@@ -106,6 +143,10 @@ export const TextDistance = styled.div`
   text-transform: uppercase;
 
   color: #d0d6f9;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const TextDistanceNumber = styled.div`
@@ -122,6 +163,9 @@ export const TextDistanceNumber = styled.div`
   text-transform: uppercase;
 
   color: #ffffff;
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 export const TextAndNumber = styled.div`
@@ -146,6 +190,10 @@ export const TravelTimeText = styled.div`
   text-transform: uppercase;
 
   color: #d0d6f9;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const TravelTimeNumber = styled.div`
@@ -162,6 +210,9 @@ export const TravelTimeNumber = styled.div`
 
   text-transform: uppercase;
   color: #d0d6f9;
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 export const TextAndTime = styled.div`

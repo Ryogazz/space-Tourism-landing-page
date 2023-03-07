@@ -9,6 +9,7 @@ export const Background = styled.div`
   width: 100%;
   height: 100vh;
   overflow-y: auto;
+
 `;
 
 export const Heading1 = styled.h1`
@@ -31,6 +32,12 @@ export const Heading5 = styled.div`
   width: 379px;
   left: 0.5px;
   display: inline-block;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+
 `;
 
 export const BodyText = styled.p`
@@ -44,13 +51,23 @@ export const BodyText = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
+
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const Container = styled.div`
   width: 450px;
   height: 382px;
-  /* left: 165px; */
   top: 387px;
+
+  //criar um media query para mobile
+  @media (max-width: 768px) {
+    height: 334px;
+  }
+
 `;
 
 export const Circle = styled.div`
@@ -76,6 +93,7 @@ export const TextCircle = styled.div`
   letter-spacing: 2px;
   color: #0b0d17;
   text-transform: uppercase;
+
 `;
 
 export const TextAndCircle = styled.div`
@@ -83,4 +101,11 @@ export const TextAndCircle = styled.div`
   justify-content: space-around;
   height: calc(100% - (96px + 40px));
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: calc(100% - (96px + 40px));
+  }
+
 `;
+
