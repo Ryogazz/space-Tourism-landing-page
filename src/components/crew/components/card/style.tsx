@@ -101,6 +101,7 @@ export const Image = styled.img`
   position: fixed;
   bottom: 0;
   right: 10%;
+  height: calc(100vh - 230px);
 `;
 export const ImageAndTextContainer = styled.div`
   justify-content: space-around;
