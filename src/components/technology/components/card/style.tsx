@@ -4,6 +4,9 @@ export const Container = styled.div`
   justify-content: center;
   margin-top: 100px;
   flex-direction: column;
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
 `;
 
 export const ContainertMenuAndTextAndImg = styled.div`
@@ -14,6 +17,10 @@ export const ContainertMenuAndTextAndImg = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
 `;
 
 export const ContainerMenuText = styled.div`
@@ -21,7 +28,13 @@ export const ContainerMenuText = styled.div`
   margin-left: 165px;
   justify-content: center;
   align-items: center;
-`
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 58px;
+  }
+`;
 
 export const Title = styled.div`
   height: 34px;
@@ -38,6 +51,12 @@ export const Title = styled.div`
   text-transform: uppercase;
   color: #ffffff;
   margin-left: 170px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-left: 38px;
+    margin-top: 40px;
+  }
 `;
 
 export const TitleNumber = styled.strong`
@@ -50,6 +69,13 @@ export const TextContainer = styled.div`
   height: 303px;
   margin-right: 130px;
   margin-left: 80px;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 export const TitleText = styled.div`
   margin-bottom: 11px;
@@ -66,6 +92,10 @@ export const TitleText = styled.div`
   letter-spacing: 2.7px;
 
   color: #d0d6f9;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 export const SubTitleText = styled.div`
   margin-bottom: 17px;
@@ -81,6 +111,10 @@ export const SubTitleText = styled.div`
   line-height: 64px;
 
   color: #ffffff;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 export const Text = styled.div`
@@ -97,10 +131,27 @@ export const Text = styled.div`
   /* or 178% */
 
   color: #d0d6f9;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
-export const Img = styled.img`
+interface ImgProps {
+  landscape: string;
+  portrait: string;
+}
+export const Img = styled.div<ImgProps>`
+  background-image: url(${(ImgProps) => ImgProps.portrait});
   width: 515px;
-  height: 100%;
+  height: 527px;
   left: 925px;
+
+  @media (max-width: 768px) {
+    background-image: url(${(ImgProps) => ImgProps.landscape});
+    background-repeat: no-repeat;
+    width: 768px;
+    margin-top: 60px;
+    height: 300px;
+  }
 `;

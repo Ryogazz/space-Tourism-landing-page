@@ -7,6 +7,11 @@ export const MenuContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    width: 300px;
+  }
 `;
 export const MenuIcon = styled.button<{ active: boolean }>`
   border-radius: 50%;
@@ -35,4 +40,11 @@ export const MenuIcon = styled.button<{ active: boolean }>`
 
   font-size: 28px;
   font-family: "'Bellefair'";
+
+  @media (max-width: 768px) {
+    margin-right: 16px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
 `;

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Background = styled.div`
@@ -12,6 +12,10 @@ export const Container = styled.div`
   justify-content: center;
   margin-top: 100px;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
 `;
 
 export const Title = styled.div`
@@ -30,6 +34,12 @@ export const Title = styled.div`
   text-transform: uppercase;
   color: #ffffff;
   margin-left: 170px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-left: 38px;
+    margin-top: 40px;
+  }
 `;
 
 export const TitleNumber = styled.strong`
@@ -54,6 +64,10 @@ export const TitleText = styled.div`
 
   mix-blend-mode: normal;
   opacity: 0.5;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const Name = styled.div`
@@ -70,6 +84,10 @@ export const Name = styled.div`
   text-transform: uppercase;
 
   color: #ffffff;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 export const Description = styled.div`
@@ -83,18 +101,28 @@ export const Description = styled.div`
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
-  /* or 178% */
 
   color: #d0d6f9;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const DescriptionContainer = styled.div`
-  margin-left: 170px;
   margin-top: 150px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    text-align: center;
+  }
 `;
 
 export const SliderContainer = styled.div`
-  margin-top: 130px;
+  margin-top: 10px;
 `;
 
 export const Image = styled.img`
@@ -102,7 +130,22 @@ export const Image = styled.img`
   bottom: 0;
   right: 10%;
   height: calc(100vh - 230px);
+
+  @media (max-width: 821px) {
+    height: calc(100vh - 721px);
+    position: relative;
+    margin-top: 20px;
+  }
+
 `;
 export const ImageAndTextContainer = styled.div`
   justify-content: space-around;
+  margin-left: 165px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+  }
 `;

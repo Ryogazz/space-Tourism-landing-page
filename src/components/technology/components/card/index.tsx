@@ -34,16 +34,22 @@ const Card = () => {
   };
 
   const technologyDataImage = () => {
+    let img = {
+      portrait: "",
+      landscape: "",
+    };
     if (selected === 1) {
-      return technologyData[0].images.portrait;
+      img.landscape = technologyData[0].images.landscape;
+      img.portrait = technologyData[0].images.portrait;
     } else if (selected === 2) {
-      return technologyData[1].images.portrait;
+      img.landscape = technologyData[1].images.landscape;
+      img.portrait = technologyData[1].images.portrait;
     } else if (selected === 3) {
-      return technologyData[2].images.portrait;
+      img.landscape = technologyData[2].images.landscape;
+      img.portrait = technologyData[2].images.portrait;
     }
+    return img;
   };
-
-
 
   return (
     <S.Container>
@@ -58,7 +64,10 @@ const Card = () => {
             {technologyDataInfo()}
           </S.TextContainer>
         </S.ContainerMenuText>
-        <S.Img src={technologyDataImage()} />
+        <S.Img
+          landscape={technologyDataImage().landscape}
+          portrait={technologyDataImage().portrait}
+        />
       </S.ContainertMenuAndTextAndImg>
     </S.Container>
   );
