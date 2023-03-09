@@ -21,16 +21,53 @@ export const Bar = styled.div`
     width: 450px;
     height: 96px;
   }
+
+  @media (max-width: 375px) {
+    position: fixed;
+    top: 0;
+    width: 254px;
+    height: 100%;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    > svg {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      width: 130px;
+      height: 19px;
+      display: flex;
+      align-items: center;
+    }
+  }
 `;
 export const Numbers = styled.strong`
   font-weight: bold;
   margin-right: 8px;
 `;
+
 export const Img = styled.div`
   background-image: url(${img});
+  background-size: contain;
   width: 48px;
   height: 48px;
   margin-left: 40px;
+
+  @media (max-width: 375px) {
+    width: 40px;
+    height: 40px;
+    margin-top: 24px;
+    margin-left: 24px;
+  }
 `;
 export const Container = styled.div`
   display: flex;
@@ -38,6 +75,10 @@ export const Container = styled.div`
   align-items: center;
   margin-top: 40px;
   @media (max-width: 768px) {
+    margin-top: 0;
+  }
+  @media (max-width: 375px) {
+    display: none;
     margin-top: 0;
   }
 `;
@@ -53,5 +94,29 @@ export const Line = styled.div`
 
   @media (max-width: 768px) {
     display: none;
+  }
+  @media (max-width: 375px) {
+    display: none;
+  }
+`;
+
+interface isVisible {
+  isVisible: boolean;
+}
+
+export const MobileContainer = styled.div<isVisible>`
+  display: none;
+  ${({ isVisible }) => isVisible && `display: flex;`}
+`;
+
+export const MenuIcon = styled.div<isVisible>`
+  display: none; 
+  ${({ isVisible }) => isVisible && `display: block;`}
+   @media (max-width: 480px) {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
   }
 `;
