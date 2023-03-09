@@ -34,54 +34,58 @@ const NavBar = () => {
 
   return (
     <>
-      <S.Img />
-      <S.MenuIcon isVisible={menuOpen}>
-        <RiMenu3Fill
-          size={40}
-          color={"white"}
-          onClick={() => setMenuOpen(true)}
-        />
-      </S.MenuIcon>
-      <S.MobileContainer isVisible={menuOpen} ref={ref}>
-        <S.Bar>
-          <IoClose
+      <>
+        <S.ImgMobile />
+        <S.MenuIcon isVisible={menuOpen}>
+          <RiMenu3Fill
             size={40}
             color={"white"}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setMenuOpen(true)}
           />
-          <NavLink to="/" style={active}>
-            <S.Numbers>00</S.Numbers>HOME
-          </NavLink>
-          <NavLink to="/destination" style={active}>
-            <S.Numbers>01</S.Numbers>DESTINATION
-          </NavLink>
-          <NavLink to="/crew" style={active}>
-            <S.Numbers>02</S.Numbers>CREW
-          </NavLink>
-          <NavLink to="/technology" style={active}>
-            <S.Numbers>03</S.Numbers>TECHNOLOGY
-          </NavLink>
-        </S.Bar>
-      </S.MobileContainer>
+        </S.MenuIcon>
+        {menuOpen && (
+          <S.MenuMobile ref={ref}>
+            <IoClose
+              size={40}
+              color={"white"}
+              onClick={() => setMenuOpen(false)}
+            />
+            <NavLink to="/" style={active}>
+              <S.Numbers>00</S.Numbers>HOME
+            </NavLink>
+            <NavLink to="/destination" style={active}>
+              <S.Numbers>01</S.Numbers>DESTINATION
+            </NavLink>
+            <NavLink to="/crew" style={active}>
+              <S.Numbers>02</S.Numbers>CREW
+            </NavLink>
+            <NavLink to="/technology" style={active}>
+              <S.Numbers>03</S.Numbers>TECHNOLOGY
+            </NavLink>
+          </S.MenuMobile>
+        )}
+      </>
 
-      <S.Container>
-        <S.Img />
-        <S.Line />
-        <S.Bar>
-          <NavLink to="/" style={active}>
-            <S.Numbers>00</S.Numbers>HOME
-          </NavLink>
-          <NavLink to="/destination" style={active}>
-            <S.Numbers>01</S.Numbers>DESTINATION
-          </NavLink>
-          <NavLink to="/crew" style={active}>
-            <S.Numbers>02</S.Numbers>CREW
-          </NavLink>
-          <NavLink to="/technology" style={active}>
-            <S.Numbers>03</S.Numbers>TECHNOLOGY
-          </NavLink>
-        </S.Bar>
-      </S.Container>
+      <>
+        <S.Container>
+          <S.Img />
+          <S.Line />
+          <S.Bar>
+            <NavLink to="/" style={active}>
+              <S.Numbers>00</S.Numbers>HOME
+            </NavLink>
+            <NavLink to="/destination" style={active}>
+              <S.Numbers>01</S.Numbers>DESTINATION
+            </NavLink>
+            <NavLink to="/crew" style={active}>
+              <S.Numbers>02</S.Numbers>CREW
+            </NavLink>
+            <NavLink to="/technology" style={active}>
+              <S.Numbers>03</S.Numbers>TECHNOLOGY
+            </NavLink>
+          </S.Bar>
+        </S.Container>
+      </>
     </>
   );
 };

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import background from "../../assets/home/background-home-desktop.jpg";
+import backgroundTablet from "../../assets/home/background-home-tablet.jpg";
+import backgroundMobile from "../../assets/home/background-home-mobile.jpg";
 
 export const Background = styled.div`
   background-image: url(${background});
@@ -10,6 +12,12 @@ export const Background = styled.div`
   height: 100vh;
   overflow-y: auto;
 
+  @media (max-width: 768px) {
+    background-image: url(${backgroundTablet});
+  }
+  @media (max-width: 3758px) {
+    background-image: url(${backgroundMobile});
+  }
 `;
 
 export const Heading1 = styled.h1`
