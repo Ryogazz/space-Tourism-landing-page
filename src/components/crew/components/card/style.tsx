@@ -132,11 +132,12 @@ export const Image = styled.img`
   height: calc(100vh - 230px);
 
   @media (max-width: 821px) {
-    height: calc(100vh - 721px);
-    position: relative;
+    position: static;
     margin-top: 20px;
+    width: 100%;
+    height: 223px;
+    object-fit: contain;
   }
-
 `;
 export const ImageAndTextContainer = styled.div`
   justify-content: space-around;

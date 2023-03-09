@@ -67,6 +67,9 @@ const Card = () => {
           <S.TitleNumber>02</S.TitleNumber> MEET YOUR CREW
         </S.Title>
         <S.ImageAndTextContainer>
+          <motion.div transition={{ duration: 0.2 }} animate={imageAnimatiou}>
+            <S.Image src={crewDataImage()} />
+          </motion.div>
           <S.DescriptionContainer>
             <motion.div transition={{ duration: 0.2 }} animate={textAnimation}>
               {crewDataInfo()}
@@ -80,9 +83,6 @@ const Card = () => {
               />
             </S.SliderContainer>
           </S.DescriptionContainer>
-          <motion.div transition={{ duration: 0.2 }} animate={imageAnimatiou}>
-            <S.Image src={crewDataImage()} />
-          </motion.div>
         </S.ImageAndTextContainer>
       </S.Container>
     </S.Background>
