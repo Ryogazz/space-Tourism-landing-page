@@ -15,6 +15,9 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     margin-top: 0px;
   }
+  @media (max-width: 375px) {
+    text-align: center;
+  }
 `;
 
 export const Title = styled.div`
@@ -38,6 +41,11 @@ export const Title = styled.div`
     font-size: 20px;
     margin-left: 38px;
     margin-top: 40px;
+  }
+  @media (max-width: 375px) {
+    font-size: 16px;
+    margin-top: 34px;
+    margin-left: 0;
   }
 `;
 
@@ -66,6 +74,12 @@ export const Img = styled.img`
     height: 300px;
     margin-bottom: 23px;
   }
+  @media (max-width: 375px) {
+    width: 170px;
+    height: 170px;
+    margin-top: 32px;
+    margin-bottom: 26px;
+  }
 `;
 
 export const TextArea = styled.div`
@@ -82,6 +96,7 @@ export const TextArea = styled.div`
   @media (max-width: 768px) {
     height: 0;
     text-align: center;
+    width: 300px;
   }
 `;
 
@@ -97,8 +112,15 @@ export const TitleText = styled.div`
   line-height: 115px;
   color: #ffffff;
   text-transform: uppercase;
+
   @media (max-width: 768px) {
     font-size: 80px;
+  }
+  @media (max-width: 375px) {
+    font-size: 56px;
+    width: 187px;
+    height: 64px;
+    top: 20px;
   }
 `;
 export const Text = styled.div`
@@ -113,8 +135,15 @@ export const Text = styled.div`
   font-size: 18px;
   line-height: 32px;
   color: #d0d6f9;
+
   @media (max-width: 768px) {
     font-size: 16px;
+  }
+  @media (max-width: 375px) {
+    width: 327px;
+    height: 125px;
+    font-size: 15px;
+    margin-top: 30px;
   }
 `;
 export const Line = styled.div`
@@ -221,9 +250,18 @@ export const TextAndTime = styled.div`
   top: 87.08%;
   bottom: 0%;
   margin-left: 80px;
+  @media (max-width: 375px) {
+    margin-left: 0px;
+    margin-top: 32px;
+  }
 `;
 
 export const DistanceAndTravel = styled.div`
   display: flex;
   align-items: flex-start;
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;

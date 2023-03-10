@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink, useHref } from "react-router-dom";
 import * as S from "./style";
-import { IoClose } from "react-icons/io5";
-import { RiMenu3Fill } from "react-icons/ri";
+import hamburgerIcon from "../../assets/shared/icon-hamburger.svg";
+import closeIcon from "../../assets/shared/icon-close.svg";
 
 const NavBar = () => {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // verificar se clicou fora do menu com useRef
-  //tipar o useRef com o tipo do elemento que ele vai receber
   const ref = useRef<HTMLDivElement>(null);
 
   const active = ({ isActive }: { isActive: boolean }) => {
@@ -37,17 +35,17 @@ const NavBar = () => {
       <>
         <S.ImgMobile />
         <S.MenuIcon isVisible={menuOpen}>
-          <RiMenu3Fill
-            size={40}
-            color={"white"}
+          <img
+            src={hamburgerIcon}
+            alt="hamburger icon"
             onClick={() => setMenuOpen(true)}
           />
         </S.MenuIcon>
         {menuOpen && (
           <S.MenuMobile ref={ref}>
-            <IoClose
-              size={40}
-              color={"white"}
+            <img
+              src={closeIcon}
+              alt="close icon"
               onClick={() => setMenuOpen(false)}
             />
             <NavLink to="/" style={active}>

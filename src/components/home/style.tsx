@@ -27,17 +27,19 @@ export const Heading1 = styled.h1`
   font-weight: 400;
   font-size: 150px;
   line-height: 172px;
+
+  @media (max-width: 375px) {
+    font-size: 80px;
+  }
 `;
-export const Heading5 = styled.div`
+export const Heading5 = styled.h5`
   font-family: "Barlow Condensed";
   font-size: 28px;
   font-weight: 400;
   line-height: 34px;
   letter-spacing: 3.72px;
   text-align: left;
-  color: #ffffff;
-  height: 34px;
-  width: 379px;
+  color: #d0d6f9;
   left: 0.5px;
   display: inline-block;
 
@@ -45,11 +47,14 @@ export const Heading5 = styled.div`
     font-size: 24px;
   }
 
-
+  @media (max-width: 375px) {
+    font-size: 16px;
+    margin-top: 40px;
+  }
 `;
 
 export const BodyText = styled.p`
-  color: #ffffff;
+  color: #d0d6f9;
   height: 128px;
   left: 0.11%;
   right: 1.22%;
@@ -60,9 +65,12 @@ export const BodyText = styled.p`
   font-size: 18px;
   line-height: 32px;
 
-
   @media (max-width: 768px) {
     font-size: 16px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 15px;
   }
 `;
 
@@ -71,11 +79,15 @@ export const Container = styled.div`
   height: 382px;
   top: 387px;
 
-  //criar um media query para mobile
   @media (max-width: 768px) {
     height: 334px;
   }
-
+  @media (max-width: 375px) {
+    width: 266px;
+    text-align: center;
+    top: 0px;
+    margin-bottom: 81px;
+  }
 `;
 
 export const Circle = styled.div`
@@ -88,6 +100,11 @@ export const Circle = styled.div`
   height: 274px;
   :hover {
     box-shadow: 0 0 10px yellow;
+  }
+
+  @media (max-width: 375px) {
+    width: 150px;
+    height: 150px;
   }
 `;
 
@@ -102,6 +119,9 @@ export const TextCircle = styled.div`
   color: #0b0d17;
   text-transform: uppercase;
 
+  @media (max-width: 375px) {
+    font-size: 20px;
+  }
 `;
 
 export const TextAndCircle = styled.div`
@@ -114,6 +134,4 @@ export const TextAndCircle = styled.div`
     flex-direction: column;
     height: calc(100% - (96px + 40px));
   }
-
 `;
-

@@ -88,7 +88,7 @@ export const MenuIcon = styled.div<isVisible>`
   @media (max-width: 480px) {
     ${({ isVisible }) => !isVisible  && `display: block;`}
     position: absolute;
-    top: 1rem;
+    top: 2rem;
     right: 1rem;
     cursor: pointer;
   }
@@ -110,9 +110,9 @@ export const MenuMobile = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
-    > svg {
+    > img {
       position: absolute;
-      top: 1rem;
+      top: 2rem;
       right: 1rem;
       cursor: pointer;
     }

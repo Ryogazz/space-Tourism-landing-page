@@ -16,6 +16,9 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     margin-top: 0px;
   }
+  @media (max-width: 375px) {
+    text-align: center;
+  }
 `;
 
 export const Title = styled.div`
@@ -39,6 +42,13 @@ export const Title = styled.div`
     font-size: 20px;
     margin-left: 38px;
     margin-top: 40px;
+  }
+  @media (max-width: 375px) {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    margin-top: 34px;
+    margin-left: 0;
+    text-align: center;
   }
 `;
 
@@ -68,6 +78,9 @@ export const TitleText = styled.div`
   @media (max-width: 768px) {
     font-size: 24px;
   }
+  @media (max-width: 375px) {
+    font-size: 16px;
+  }
 `;
 
 export const Name = styled.div`
@@ -88,6 +101,9 @@ export const Name = styled.div`
   @media (max-width: 768px) {
     font-size: 40px;
   }
+  @media (max-width: 375px) {
+    font-size: 24px;
+  }
 `;
 
 export const Description = styled.div`
@@ -107,6 +123,10 @@ export const Description = styled.div`
   @media (max-width: 768px) {
     font-size: 16px;
   }
+  @media (max-width: 375px) {
+    font-size: 14px;
+    width: 100%;
+  }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -119,10 +139,24 @@ export const DescriptionContainer = styled.div`
     margin-top: 60px;
     text-align: center;
   }
+
+  @media (max-width: 375px) {
+    margin-top: 16px;
+    width: 327px;
+    height: 170px;
+  }
 `;
 
 export const SliderContainer = styled.div`
-  margin-top: 10px;
+  margin-bottom: 94px;
+  position: absolute;
+  bottom: 0;
+  @media (max-width: 375px) {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
 `;
 
 export const Image = styled.img`
@@ -137,6 +171,7 @@ export const Image = styled.img`
     width: 100%;
     height: 223px;
     object-fit: contain;
+    border-bottom: 1px solid #383b4b;
   }
 `;
 export const ImageAndTextContainer = styled.div`

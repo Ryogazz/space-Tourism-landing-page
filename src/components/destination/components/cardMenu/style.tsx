@@ -26,6 +26,10 @@ export const Container = styled.div`
     width: 285.5px;
     height: 34px;
   }
+  @media (max-width: 375px) {
+    width: 237.5px;
+    height: 28px;
+  }
 `;
 
 export const Link = styled.div<{ planet: boolean }>`
@@ -37,5 +41,8 @@ export const Link = styled.div<{ planet: boolean }>`
   ${({ planet }) => planet && `box-shadow: inset 0px -2px 0px #fff;`}
   @media (max-width: 768px) {
     font-size: 16px;
+  }
+  @media (max-width: 375px) {
+    font-size: 14px;
   }
 `;

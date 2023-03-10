@@ -12,6 +12,9 @@ export const MenuContainer = styled.div`
     flex-direction: row;
     width: 300px;
   }
+  @media (max-width: 375px) {
+    width: 152px;
+  }
 `;
 export const MenuIcon = styled.button<{ active: boolean }>`
   border-radius: 50%;
@@ -46,5 +49,12 @@ export const MenuIcon = styled.button<{ active: boolean }>`
     width: 60px;
     height: 60px;
     font-size: 24px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    margin-right: 11px;
   }
 `;
