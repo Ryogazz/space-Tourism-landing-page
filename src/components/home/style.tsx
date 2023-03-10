@@ -15,7 +15,7 @@ export const Background = styled.div`
   @media (max-width: 768px) {
     background-image: url(${backgroundTablet});
   }
-  @media (max-width: 3758px) {
+  @media (max-width: 375px) {
     background-image: url(${backgroundMobile});
   }
 `;
